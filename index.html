@@ -20,10 +20,10 @@
 </head>
 
 <body>
-    <header class="header-section">
+    <header class="header-section sticky-top">
         <nav class="navbar navbar-expand-lg py-3">
             <div class="container">
-                <a class="navbar-brand me-auto" href="#">
+                <a class="navbar-brand" href="#">
                     <img src="./img/logo.svg" class="img-fluid" width="100" alt="logo" />
                 </a>
                 <div class="offcanvas offcanvas-start" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -482,5 +482,19 @@
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+<script>
+ // Lắng nghe sự kiện cuộn trang
+    window.onscroll = function () {
+        // Lấy đối tượng header
+        var header = document.querySelector('.header-section');
 
+        // Kiểm tra nếu trang đã cuộn xuống quá một khoảng cách nhất định
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');  // Thêm lớp 'scrolled' để thay đổi màu nền
+        } else {
+            header.classList.remove('scrolled');  // Gỡ bỏ lớp 'scrolled' khi cuộn lên
+        }
+    };
+
+</script>
 </html>

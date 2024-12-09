@@ -23,6 +23,10 @@ a {
   font-weight: 400;
   line-height: normal;
 }
+.header-section.scrolled {
+    background-color: #F9F9F9;
+}
+
 
 .header-section .btn-login {
   display: flex;
